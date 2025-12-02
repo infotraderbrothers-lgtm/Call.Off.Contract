@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Call-Off Contract</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="document">
+    <div class="header">
+      <h1>Call-Off Contract</h1>
+      <div class="subtitle">Schedule 1 to Framework Agreement</div>
+    </div>
+    
+    <div class="parties">
+      <h2>Parties to this Call-Off Contract</h2>
+      <div class="party">
+        <div class="party-label">The Client</div>
+        <div class="party-name"><span class="placeholder">{{ContractingPartyName}}</span></div>
+        <div>of <span class="placeholder">{{ContractingPartyAddress}}</span></div>
+      </div>
+      <div class="party">
+        <div class="party-label">The Contractor</div>
+        <div class="party-name"><span class="placeholder">Trader Brothers</span></div>
+        <div>of <span class="placeholder">P.O. Box, Scotland</span></div>
+      </div>
+    </div>
+    
+    <div class="effective-date">
+      This Call-Off Contract is made on <span class="placeholder">{{CallOffDate}}</span> pursuant to the Framework Agreement dated <span class="placeholder">{{FrameworkAgreementDate}}</span>
+    </div>
+    
+    <div class="section">
+      <div class="section-number">1. Project Details</div>
+      
+      <div class="field-row">
+        <span class="field-label">Project Title:</span>
+        <span class="field-value">
+          <input type="text" id="projectTitle" class="editable-input" placeholder="Enter Project Title">
+        </span>
+      </div>
+      
+      <div class="field-row">
+        <span class="field-label">Project Address:</span>
+        <span class="field-value">
+          <input type="text" id="projectAddress" class="editable-input" placeholder="Enter Project Address">
+        </span>
+      </div>
+      
+      <div class="field-row">
+        <span class="field-label">Quotation Reference:</span>
+        <span class="field-value">
+          <input type="text" id="quotationReference" class="editable-input" placeholder="Enter Quotation Reference">
+        </span>
+      </div>
+      
+      <div class="field-row">
+        <span class="field-label">Quotation Date:</span>
+        <span class="field-value">
+          <input type="text" id="quotationDate" class="editable-input" placeholder="Enter Quotation Date">
+        </span>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="section-number">2. Contacts</div>
+      
+      <div class="subsection">
+        <div class="subsection-title">Client Contact</div>
+        <div class="field-row">
+          <span class="field-label">Name:</span>
+          <span class="field-value"><span class="placeholder">{{ClientContactName}}</span></span>
+        </div>
+        <div class="field-row">
+          <span class="field-label">Telephone:</span>
+          <span class="field-value"><span class="placeholder">{{ClientContactPhone}}</span></span>
+        </div>
+        <div class="field-row">
+          <span class="field-label">Email:</span>
+          <span class="field-value"><span class="placeholder">{{ClientContactEmail}}</span></span>
+        </div>
+      </div>
+      
+      <div class="subsection">
+        <div class="subsection-title">Contractor Contact</div>
+        <div class="field-row">
+          <span class="field-label">Name:</span>
+          <span class="field-value"><span class="placeholder">{{ContractorContactName}}</span></span>
+        </div>
+        <div class="field-row">
+          <span class="field-label">Telephone:</span>
+          <span class="field-value"><span class="placeholder">{{ContractorContactPhone}}</span></span>
+        </div>
+        <div class="field-row">
+          <span class="field-label">Email:</span>
+          <span class="field-value"><span class="placeholder">{{ContractorContactEmail}}</span></span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="section-number">3. Scope of Works</div>
+      
+      <div class="clause"><span class="clause-number">3.1</span> The Contractor shall carry out and complete the following Works:</div>
+      
+      <div class="scope-box">
+        <textarea id="scopeOfWorks" class="editable-textarea" placeholder="Insert detailed description of works, specifications, drawings referenced, etc."></textarea>
+      </div>
+      
+      <div class="field-row">
+        <span class="field-label"><span class="clause-number">3.2</span> Materials Responsibility:</span>
+        <span class="field-value">
+          <input type="text" id="materialsResponsibility" class="editable-input" placeholder='e.g. "Contractor to supply all materials"'>
+        </span>
+      </div>
+      <div class="clause" style="margin-left:20px; font-size:10pt; color:#666;">[e.g. "Contractor to supply all materials" / "Client to supply timber, Contractor to supply fixings" / "Labour only"]</div>
+      
+      <div class="field-row">
+        <span class="field-label"><span class="clause-number">3.3</span> Drawings/Specifications:</span>
+        <span class="field-value">
+          <input type="text" id="drawingsReference" class="editable-input" placeholder='e.g. "Drawing No. 001 Rev A" or "N/A"'>
+        </span>
+      </div>
+      <div class="clause" style="margin-left:20px; font-size:10pt; color:#666;">[e.g. "Drawing No. 001 Rev A dated 01/01/2025" or "N/A"]</div>
+    </div>
+    
+    <div class="section">
+      <div class="section-number">4. Programme</div>
+      
+      <div class="field-row">
+        <span class="field-label"><span class="clause-number">4.1</span> Anticipated Start Date:</span>
+        <span class="field-value">
+          <input type="text" id="startDate" class="editable-input" placeholder="Enter Start Date">
+        </span>
+      </div>
+      
+      <div class="field-row">
+        <span class="field-label"><span class="clause-number">4.2</span> Anticipated Completion Date:</span>
+        <span class="field-value">
+          <input type="text" id="completionDate" class="editable-input" placeholder="Enter Completion Date">
+        </span>
+      </div>
+      
+      <div class="field-row">
+        <span class="field-label"><span class="clause-number">4.3</span> Estimated Duration:</span>
+        <span class="field-value">
+          <input type="text" id="estimatedDuration" class="editable-input" placeholder='e.g. "5 working days"'>
+        </span>
+      </div>
+      <div class="clause" style="margin-left:20px; font-size:10pt; color:#666;">[e.g. "5 working days" / "2 weeks"]</div>
+      
+      <div class="clause"><span class="clause-number">4.4</span> Programme Notes / Milestones:</div>
+      <div class="scope-box">
+        <textarea id="programmeNotes" class="editable-textarea" placeholder="Insert key milestones, phasing requirements, access restrictions, working hours, etc. or 'N/A'"></textarea>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="section-number">5. Commercial Terms</div>
+      
+      <div class="field-row">
+        <span class="field-label"><span class="clause-number">5.1</span> Contract Price (ex. VAT):</span>
+        <span class="field-value">
+          <input type="text" id="contractPrice" class="editable-input" placeholder="Enter Contract Price">
+        </span>
+      </div>
+      
+      <div class="field-row">
+        <span class="field-label"><span class="clause-number">5.2</span> Pricing Basis:</span>
+        <span class="field-value">
+          <input type="text" id="pricingBasis" class="editable-input" placeholder='e.g. "Fixed price"'>
+        </span>
+      </div>
+      <div class="clause" style="margin-left:20px; font-size:10pt; color:#666;">[e.g. "Fixed price" / "Day rate per Schedule 2" / "Measured works"]</div>
+      
+      <div class="field-row">
+        <span class="field-label"><span class="clause-number">5.3</span> Payment Terms:</span>
+        <span class="field-value">
+          <input type="text" id="paymentTerms" class="editable-input" placeholder='e.g. "As per Framework Agreement (30 days)"'>
+        </span>
+      </div>
+      <div class="clause" style="margin-left:20px; font-size:10pt; color:#666;">[e.g. "As per Framework Agreement (30 days)" / "50% deposit, 50% on completion" / "Weekly valuations"]</div>
+      
+      <div class="field-row">
+        <span class="field-label"><span class="clause-number">5.4</span> Retention:</span>
+        <span class="field-value">
+          <input type="text" id="retentionTerms" class="editable-input" placeholder='e.g. "5% retained until practical completion"'>
+        </span>
+      </div>
+      <div class="clause" style="margin-left:20px; font-size:10pt; color:#666;">[e.g. "5% retained until practical completion" / "None" / "As per Framework Agreement"]</div>
+    </div>
+    
+    <div class="section">
+      <div class="section-number">6. Special Requirements</div>
+      
+      <div class="clause"><span class="clause-number">6.1</span> The following special conditions apply to this Call-Off Contract:</div>
+      
+      <div class="scope-box">
+        <textarea id="specialRequirements" class="editable-textarea" placeholder="Insert any access arrangements, site inductions required, permits, client-specific health & safety requirements, parking, storage, protection of existing works, etc. or 'None — standard Framework Agreement terms apply'"></textarea>
+      </div>
+    </div>
+    
+    <div class="terms-note">
+      <strong>Incorporation of Framework Agreement:</strong> This Call-Off Contract is subject to the terms and conditions of the Framework Agreement dated <span class="placeholder">{{FrameworkAgreementDate}}</span>. In the event of any conflict between this Call-Off Contract and the Framework Agreement, the terms of the Framework Agreement shall prevail unless expressly stated otherwise herein.
+    </div>
+    
+    <div class="signature-block">
+      <div class="signature-header">Execution</div>
+      
+      <h4 style="font-size: 10pt; text-transform: uppercase; color: #555; margin-bottom: 20px; padding-bottom: 5px; border-bottom: 1px solid #ccc;">Signed on behalf of Trader Brothers</h4>
+      
+      <div class="contractor-signatures">
+        <div class="digital-sig-box">
+          <div class="sig-info-label">Name</div>
+          <div class="sig-info-name">Olaf Sawczak</div>
+          <div class="sig-info-position">Director</div>
+          <div class="sig-info-label" style="margin-top: 15px;">Signature</div>
+          <div class="sig-image-box">
+            <img src="https://github.com/infotraderbrothers-lgtm/contract.signatures/blob/main/images/Olaf.png?raw=true" alt="Olaf Sawczak Signature">
+          </div>
+        </div>
+        
+        <div class="digital-sig-box">
+          <div class="sig-info-label">Name</div>
+          <div class="sig-info-name">Milosz Sawczak</div>
+          <div class="sig-info-position">Manager</div>
+          <div class="sig-info-label" style="margin-top: 15px;">Signature</div>
+          <div class="sig-image-box">
+            <img src="https://github.com/infotraderbrothers-lgtm/contract.signatures/blob/main/images/Milosz.png?raw=true" alt="Milosz Sawczak Signature">
+          </div>
+        </div>
+      </div>
+      
+      <div class="client-signature-section">
+        <h4 style="font-size: 10pt; text-transform: uppercase; color: #555; margin-bottom: 20px; padding-bottom: 5px; border-bottom: 1px solid #ccc; text-align: center;">Signed on behalf of <span id="clientPartyNameDisplay">the Client</span></h4>
+        
+        <div id="client-sign-section">
+          <div class="sig-field">
+            <div class="sig-label">Name</div>
+            <div class="input-with-confirm">
+              <input type="text" id="clientName" placeholder="Enter full name">
+              <label class="confirm-label">
+                <input type="checkbox" id="nameCheckbox" onchange="toggleNameEdit()">
+                <span>Confirm</span>
+              </label>
+            </div>
+          </div>
+          <div class="sig-field">
+            <div class="sig-label">Position</div>
+            <div class="input-with-confirm">
+              <input type="text" id="clientPosition" placeholder="Position">
+              <label class="confirm-label">
+                <input type="checkbox" id="positionCheckbox" onchange="togglePositionEdit()">
+                <span>Confirm</span>
+              </label>
+            </div>
+          </div>
+          <div class="sig-field">
+            <div class="sig-label">Signature</div>
+            <canvas id="clientSignaturePad"></canvas>
+            <button onclick="clearClientSignature()" class="btn-secondary">Clear</button>
+          </div>
+          <div class="sig-field">
+            <div class="sig-label">Date</div>
+            <input type="date" id="clientDate" readonly>
+          </div>
+          
+          <div style="display: flex; justify-content: center; margin-top: 20px;">
+            <button onclick="submitContract()" class="btn-primary">Submit</button>
+          </div>
+        </div>
+        
+        <div id="client-signed-section" style="display: none;"></div>
+        
+        <div id="contract-actions" style="display: none;" class="contract-actions">
+          <h4>Contract Signed Successfully</h4>
+          <div class="action-buttons">
+            <button onclick="viewContract()" class="btn-view">View Signed Contract</button>
+            <button onclick="sendToWebhook()" id="sendWebhookBtn" class="btn-send">Send Contract</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
